@@ -1,0 +1,32 @@
+body {
+	padding: 100px;
+}
+
+#ad {
+	position: relative;
+	widows: 426px;
+	height: 224px;
+	overflow: hidden;
+}
+
+#ad li {
+	width: 426px;
+	height: 224px;
+}
+
+#ad li:nth-child(2), #ad li:nth-child(3) {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: bold;
+	position: absolute;
+	color: green;
+	left: 0;
+	bottom: -40px;
+}
+
+#ad li:nth-child(2) {
+	background-color: #000000;
+	opacity: .2;
+	text-indent: -999px;
+}

@@ -1,0 +1,22 @@
+body {
+	padding: 150px;
+}
+
+#ad img {
+	border: 1px solid bisque;
+}
+
+.bigImg {
+	padding: 10px;
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+	position: absolute;
+	background-color: greenyellow;
+}
+
+.bigImg p {
+	font-size: 18px;
+	line-height: 28px;
+	color: #000000;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>js插件化</title>
+		<script type="text/javascript">
+			// 闭包
+			;(function(win, doc, undefined) {
+				// 插件名字
+				var AddHtml = function(id) {
+					// 针对属性做初始化
+					this.div = document.getElementById(id);
+					this.p = this.div.getElementsByTagName('p')[0];
+					this.input = this.div.getElementsByTagName('input')[0];
+					// 绑定事件
+					this.init();
+				};
+				
+				// 定义方法
+				AddHtml.prototype = {
+					constructor: AddHtml,
+					init: function() {
+						var _self = this;  // AddHtml
+						this.input.onkeyup = function() {
+							// 获取输入框的值,并设置到p标签
+							var value = this.value;
+							_self.p.innerHTML = value;
+							// _self.setColor();
+						}
+					},
+					// 设置p标签颜色
+					setColor: function() {
+						var colors = ['#FF0000','#00ff00','#0000FF','#FFFF00','#FFCC00','#00AAFF','#00FFCC'];
+						var index = parseInt(Math.random() * (colors.length + 1));
+						this.p.style.color = colors[index];
+					}
+				};
+				
+				// 将AddHtml暴露给外部的调用者
+				// 参考:http://www.voidcn.com/article/p-zwonfeok-bsp.html
+				var _globals;
+				_globals = (function(){ return this || (0,eval)("this"); }());
+				// Window.AddHtml = AddHtml;
+				_globals.AddHtml = AddHtml;
+			}(window, document));
+			
+			
+			// 测试
+			window.onload = function() {
+				var myAddHtml = new AddHtml('ad');
+				myAddHtml.setColor();
+				
+				var $ = new AddHtml('ad2');
+				$.setColor();
+			}
+		</script>
+	</head>
+	<body>
+		<div id="ad">
+			<p>test</p>
+			<input value="test" />
+		</div>
+		
+		<div id="ad2">
+			<p>test2</p>
+			<input value="test2" />
+		</div>
+		
+	</body>
+</html>

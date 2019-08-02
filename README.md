@@ -11,3 +11,7 @@
 ### 3. [think_in_plugin](https://github.com/comeCU/some-js/tree/master/think_in_plugin)
 <div align="center"><img src="https://github.com/comeCU/some-js/blob/master/think_in_plugin/img/show01.gif"/></div>
 
+
+### 4. [magnifier](https://github.com/comeCU/some-js/tree/master/magnifier)
+<div align="center"><img src="https://github.com/comeCU/some-js/blob/master/magnifier/img/show01.gif"/></div>
+

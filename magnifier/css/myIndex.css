@@ -1,0 +1,63 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	padding: 100px;
+}
+
+#container {
+	width: 80%;
+	height: 800px;
+	margin: 0 auto;
+	background-color: papayawhip;
+}
+
+#smallDiv {
+	width: 310px;
+	height: 310px;
+	position: relative;
+}
+
+#smallDiv img {
+	border: 1px solid gray;
+}
+
+#maskDiv {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 0;
+	top: 0;
+	background-color: #000000;
+	opacity: .2;
+	cursor: move;
+	display: none;
+}
+
+#cover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	cursor: move;
+	opacity: 0;
+	z-index: 10;
+}
+
+#bigDiv {
+	width: 310px;
+	height: 310px;
+	position: relative;
+	overflow: hidden;
+	display: none;
+}
+
+#bigDiv img {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+

@@ -16,3 +16,7 @@
 
 ### 5. [score](https://github.com/comeCU/some-js/tree/master/score)
 <div align="center"><img src="https://github.com/comeCU/some-js/blob/master/score/img/show01.gif"/></div>
+
+### 6. [menu](https://github.com/comeCU/some-js/tree/master/menu)
+<div align="center"><img src="https://github.com/comeCU/some-js/blob/master/menu/img/show01.gif"/></div>
+
